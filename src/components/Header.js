@@ -4,8 +4,8 @@ import '../css/App.css';
 class Header extends Component {
   render() {
     return (
-      <div className="header centre" style={{top: this.props.distFromTop + 'vw'}}>
-      	<h3>{this.props.name}</h3>
+      <div className='header'>
+      	<h2>{this.props.name}</h2>
       </div>
     );
   }

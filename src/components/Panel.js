@@ -7,6 +7,8 @@ class Panel extends Component {
     return (
 			<ReactCSSTransitionGroup
 	      transitionName="resume"
+	      transitionEnter={false}
+      	transitionLeave={false}
 	      transitionAppear={true}
       	transitionAppearTimeout={1000}>
         
