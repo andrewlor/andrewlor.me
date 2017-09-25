@@ -13,6 +13,7 @@ class Logo extends Component {
 					src={this.props.src}
 					style={{height: '5vw', width: '5vw'}}
 				/>
+				{this.props.paperClip}
 			</a>
     );
   }

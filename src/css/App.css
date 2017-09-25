@@ -46,6 +46,7 @@ h3 {
   top: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
+  color: white;
 }
 
 .logo {
@@ -103,20 +104,28 @@ h3 {
   z-index: -1;
 }
 
+#paperClip {
+  width: 3vw;
+  position: absolute;
+  filter: invert(100%);
+}
+
 .header {
-  width: 40vw;
-  margin-left: 30vw;
+  width: 50vw;
+  margin-left: 25vw;
   border-bottom: 0.5vw solid #8cb8ff;
 }
 
 /*Transitions*/
 .resume-appear {
   opacity: 0.01;
+  transform: translate(-150%, -50%);
 }
 
 .resume-appear.resume-appear-active {
   opacity: 1;
-  transition: opacity 2000ms ease;
+  transform: translate(-50%, -50%);
+  transition: opacity 2000ms ease, transform 1500ms ease;
 }
 
 .contactMenu-enter {
