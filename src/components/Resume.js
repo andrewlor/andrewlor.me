@@ -23,11 +23,18 @@ class Resume extends Component {
         <div id="resume" className="centre">
 	      	<TopBar style={{zIndex: 100}}></TopBar>
 	      	<div style={{height: '8vw'}}></div>
-	      	<Header name='Skills'/>
-	      	<Header name='Education'/>
-	      	<Header name='Work Experience'/>
-	      	<Header name='Passion Projects'/>
-	      	<Header name='Hobbies and Interests'/>
+	      	<Header name='skills'/>
+	      	<div className='panelBox'>
+	      		<Panel name='node.js'/>
+	      		<Panel name='html/css'/>
+	      		<Panel name='ruby'/>
+	      		<Panel name='java'/>
+	      		<Panel name='c/c++'/>
+	      	</div>
+	      	<Header name='education'/>
+	      	<Header name='work experience'/>
+	      	<Header name='passion projects'/>
+	      	<Header name='hobbies and interests'/>
 	      </div>
       </ReactCSSTransitionGroup>
     );

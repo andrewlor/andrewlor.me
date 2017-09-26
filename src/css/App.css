@@ -70,9 +70,26 @@ h3 {
 }
 
 .panel {
-  width: 5vw;
-  height: 5vw;
-  background-color: white;
+  width: 10vw;
+  height: 10vw;
+  margin-top: 1vw;
+  border-radius: 1vw;
+  background-color: grey;
+  display: inline-block;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.panelBox {
+  width: 45vw;
+  margin-left: 27.5vw;
+  margin-bottom: 1vw;
+}
+
+.panelText {
+  text-align: center;
+  font-size: 1.5vw;
+  color: white;
 }
 
 .contactMenuShell {
