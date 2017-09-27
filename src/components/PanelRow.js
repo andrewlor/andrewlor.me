@@ -9,36 +9,40 @@ class PanelRow extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      expansion: null,
-      renderExpansion: false,
+      expansions: this.props.panels.map((element, index) => {
+       		return <PanelExpansion info={element} key={index}/>;
+       	}),
+      renderExpansions: this.props.panels.map((element) => {return false}),
     }
   }
 
-  panelExpansionUnmount = () => {
-  	this.setState({expansion: null});
-  }
-
-  expand = (description) => {
+  expand = (index) => {
+  	let newArr = this.state.renderExpansions;
+  	newArr[index] = true;
   	if (!this.state.expansion) {
-  		this.setState({renderExpansion: true, expansion: <PanelExpansion componentWillUnmount={this.panelExpansionUnmount} description={description}/>});
+  		this.setState({renderExpansions: newArr});
   	}
   };
 
-  collapse = () => {
-    this.setState({renderExpansion: false});
+  collapse = (index) => {
+  	let newArr = this.state.renderExpansions;
+  	newArr[index] = false;
+    this.setState({renderExpansions: newArr});
   }
 
   render() {
     return (
       <div className='panelBox'>
-       	{this.props.panels.map((element) => {
-       		return <Panel name={element.name} onMouseEnter={() => {this.expand(element.description)}} onMouseLeave={this.collapse}></Panel>;
+       	{this.props.panels.map((element, index) => {
+       		return <Panel name={element.name} onMouseEnter={() => {this.expand(index)}} onMouseLeave={() => {this.collapse(index)}} key={index}/>;
        	})}
         <ReactCSSTransitionGroup
           transitionName="panelExpansion"
           transitionEnterTimeout={250}
           transitionLeaveTimeout={250}>
-          {this.state.renderExpansion ? this.state.expansion : null}
+          {this.state.expansions.map((element, index) => {
+          	return this.state.renderExpansions[index] ? element : null
+          })}
         </ReactCSSTransitionGroup>
       </div>
     );

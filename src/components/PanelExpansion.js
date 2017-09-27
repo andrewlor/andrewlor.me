@@ -7,7 +7,15 @@ class PanelExpansion extends Component {
   render() {
     return (
 			<div className='panelExpansion'>
-				<h3 className='centre' style={{position: 'relative'}}>{this.props.description}</h3>
+				<div className='panelExpansionContent'>
+					<h3 style={{display: 'inline', fontSize: '1.25vw'}}>{this.props.info.header}</h3>
+					<h3 style={{display: 'inline', float: 'right', fontSize: '1.25vw'}}>{this.props.info.date}</h3>
+					<ul>
+						{this.props.info.description.map((element, index) => {
+							return <li key={index}>{element}</li>
+						})}
+					</ul>
+				</div>
 			</div>
     );
   }

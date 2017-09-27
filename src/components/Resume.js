@@ -25,12 +25,13 @@ class Resume extends Component {
         <div id="resume" className="centre">
 	      	<TopBar style={{zIndex: 1}}></TopBar>
 	      	<div style={{height: '8vw'}}></div>
-	      	{dataObj.headers.map((header) => {
-	      		return <span>
+	      	{dataObj.headers.map((header, index) => {
+	      		return <span key={index}>
 		      		<Header name={header.name}/>
 		      		<PanelRow panels={header.panels}/>
 	      		</span>
 	      	})}
+	      	<div style={{height: '10vw'}}></div>
 	      </div>
       </ReactCSSTransitionGroup>
     );
