@@ -70,14 +70,24 @@ h3 {
 }
 
 .panel {
-  width: 10vw;
-  height: 10vw;
+  /*width: 10vw;*/
+/*  height: 10vw;*/
   margin-top: 1vw;
   border-radius: 1vw;
-  background-color: grey;
+  background-color: #8cb8ff;
   display: inline-block;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
+  padding: 1vw;
+  border: none;
+}
+
+.panel:hover {
+  background-color: grey;
+}
+
+.panel:focus {
+  outline: none;
 }
 
 .panelBox {
@@ -90,6 +100,13 @@ h3 {
   text-align: center;
   font-size: 1.5vw;
   color: white;
+}
+
+.panelExpansion {
+  height: 10vw;
+  background-color: white;
+  border-radius: 1vw;
+  margin-top: 1vw;
 }
 
 .contactMenuShell {
@@ -188,6 +205,25 @@ h3 {
 .copiedNotification-leave.copiedNotification-leave-active {
   transform: translate(-100%, 0%);
   transition: transform 250ms ease;
+}
+
+.panelExpansion-enter {
+  height: 0vw;
+}
+
+.panelExpansion-enter.panelExpansion-enter-active {
+  height: 10vw;
+  transition: height 250ms ease;
+}
+
+.panelExpansion-leave {
+  height: 10vw;
+}
+
+.panelExpansion-leave.panelExpansion-leave-active {
+  height: 0vw;
+
+  transition: height 250ms ease;
 }
 
 

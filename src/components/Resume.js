@@ -4,11 +4,13 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Assets
 import '../css/App.css';
+import dataObj from '../helpers/data';
 
 // Components
 import TopBar from './TopBar';
 import Header from './Header';
 import Panel from './Panel';
+import PanelRow from './PanelRow';
 
 
 class Resume extends Component {
@@ -21,20 +23,14 @@ class Resume extends Component {
 	      transitionAppear={true}
       	transitionAppearTimeout={2000}>
         <div id="resume" className="centre">
-	      	<TopBar style={{zIndex: 100}}></TopBar>
+	      	<TopBar style={{zIndex: 1}}></TopBar>
 	      	<div style={{height: '8vw'}}></div>
-	      	<Header name='skills'/>
-	      	<div className='panelBox'>
-	      		<Panel name='node.js'/>
-	      		<Panel name='html/css'/>
-	      		<Panel name='ruby'/>
-	      		<Panel name='java'/>
-	      		<Panel name='c/c++'/>
-	      	</div>
-	      	<Header name='education'/>
-	      	<Header name='work experience'/>
-	      	<Header name='passion projects'/>
-	      	<Header name='hobbies and interests'/>
+	      	{dataObj.headers.map((header) => {
+	      		return <span>
+		      		<Header name={header.name}/>
+		      		<PanelRow panels={header.panels}/>
+	      		</span>
+	      	})}
 	      </div>
       </ReactCSSTransitionGroup>
     );
