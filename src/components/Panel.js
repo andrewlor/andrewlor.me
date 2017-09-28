@@ -4,11 +4,12 @@ import '../css/App.css';
 class Panel extends Component {
   render() {
     return (
-      <div style={{display: 'inline'}}>
+      <span>
   			<button className='panel' onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
           <h3 className='panelText'>{this.props.name}</h3>
         </button>
-      </div>
+        {this.props.isExpanded ? <div className='panelExpansionConnecter'></div> : null}
+      </span>
     );
   }
 }

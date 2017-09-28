@@ -6,7 +6,7 @@ class PanelExpansion extends Component {
 
   render() {
     return (
-			<div className='panelExpansion'>
+			<div className='panelExpansion' onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
 				<div className='panelExpansionContent'>
 					<h3 style={{display: 'inline', fontSize: '1.25vw'}}>{this.props.info.header}</h3>
 					<h3 style={{display: 'inline', float: 'right', fontSize: '1.25vw'}}>{this.props.info.date}</h3>

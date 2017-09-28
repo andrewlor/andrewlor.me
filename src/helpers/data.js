@@ -30,15 +30,15 @@ module.exports = {
 			panels: [
 				{
 					name: 'UWaterloo: Bachelor of CS',
-					header: 'Candidate for a Bachelor of Computer Science at the University of Waterloo',
+					header: 'University of Waterloo',
 					date: 'Sept 2016 - current',
-					description: []
+					description: ['- Candidate for a Bachelor of Computer Science']
 				},
 				{
 					name: 'EMHS: Diploma',
-					header: 'Ernest Manning High School: Alberta High School Diploma',
+					header: 'Ernest Manning: Alberta High School Diploma',
 					date: 'Sept 2013 – June 2016',
-					description: ['College Board’s Computer Science Advanced Placement Exam (Score: 5/5)']
+					description: ['- College Board’s Computer Science Advanced Placement Exam (Score: 5/5)']
 				}
 			]
 		},
@@ -49,7 +49,7 @@ module.exports = {
 					name: 'Kudos: Intern Developer',
 					header: 'Kudos Inc., Intern Developer',
 					date: 'May 2017 – Aug 2017',
-					description: ['Used HTML, CSS, JS, React.js to build responsive UI/UX', 'Developed and maintained web applications using tools like Ruby on Rails and Node.js', 'Developed custom reports using SQL queries']
+					description: ['- Used HTML, CSS, JS, React.js to build a responsive UI app designed for TVs', '- Implemented an authentication flow analogous to OAuth, in Ruby on Rails', '- Used node.js and sql queries to implement reporting features', '- Resolved issues pertaining to a node.js Slack bot app using the SlackAPI']
 				},
 				{
 					name: 'AlgoLab: Web Developer',

@@ -27,7 +27,7 @@ ul {
   padding: 1vw;
   font-family: avenir;
   font-weight: lighter;
-  font-size: 1.25vw;
+  font-size: 1.125vw;
   list-style-type: none;
 }
 
@@ -39,6 +39,7 @@ ul {
 }
 
 #resume {
+  overflow-y: scroll;
   height: 100%;
   width: 100%;
 }
@@ -83,8 +84,6 @@ ul {
 }
 
 .panel {
-  /*width: 10vw;*/
-/*  height: 10vw;*/
   margin-top: 1vw;
   border-radius: 1vw;
   background-color: #8cb8ff;
@@ -115,11 +114,14 @@ ul {
   color: white;
 }
 
+.panelExpansionConnecter {
+  height: 1vw;
+}
+
 .panelExpansion {
-  /*height: 10vw;*/
+  height: 10vw;
   background-color: white;
   border-radius: 1vw;
-  margin-top: 1vw;
   overflow: hidden;
 }
 
@@ -127,6 +129,7 @@ ul {
   width: calc(100% - 2vw);
   height: calc(100% - 2vw);
   padding: 1vw;
+  overflow-y: scroll;
 }
 
 .contactMenuShell {
@@ -171,8 +174,7 @@ ul {
 }
 
 #copiedNotification {
-  position: absolute;
-  /*display: inline-block;*/
+  position: fixed;
   background-color: grey;
   left: 0;
   bottom: 0;
