@@ -1,6 +1,7 @@
 // Packages
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Clipboard from 'clipboard';
 
 // Assets
 import '../css/App.css';
@@ -22,6 +23,7 @@ class TopBar extends Component {
 	    renderContact: false,
 	    renderCopiedNotification: false
 	  };
+	  new Clipboard('#profilePicture');
 	}
 
 	showContact = () => {
@@ -58,7 +60,8 @@ class TopBar extends Component {
 				  <Logo src={me} left={13} id='profilePicture' paperClip={paperClip}
 				  	onMouseEnter={this.showContact}
 				  	onMouseLeave={this.hideContact}
-				  	onClick={this.showCopiedNotification}></Logo>
+				  	onClick={this.showCopiedNotification}
+				  	data-clipboard-text='a2lor@edu.uwaterloo.ca'></Logo>
 					<h1 id="name">&lt; andrew james lor /&gt;</h1>
 				</div>
 				<ReactCSSTransitionGroup

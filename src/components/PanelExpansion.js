@@ -8,13 +8,14 @@ class PanelExpansion extends Component {
     return (
 			<div className='panelExpansion' onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
 				<div className='panelExpansionContent'>
-					<h3 style={{display: 'inline', fontSize: '1.25vw'}}>{this.props.info.header}</h3>
-					<h3 style={{display: 'inline', float: 'right', fontSize: '1.25vw'}}>{this.props.info.date}</h3>
+					<h3 style={{display: 'inline'}}>{this.props.info.header}</h3>
+					<h3 style={{display: 'inline', float: 'right'}}>{this.props.info.date}</h3>
 					<ul>
 						{this.props.info.description.map((element, index) => {
 							return <li key={index}>{element}</li>
 						})}
 					</ul>
+					<div dangerouslySetInnerHTML={{__html: this.props.info.embed}}></div>
 				</div>
 			</div>
     );

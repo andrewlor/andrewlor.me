@@ -8,7 +8,7 @@ class Panel extends Component {
   			<button className='panel' onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
           <h3 className='panelText'>{this.props.name}</h3>
         </button>
-        {this.props.isExpanded ? <div className='panelExpansionConnecter'></div> : null}
+        {true ? <div className='panelExpansionConnecter'></div> : null}
       </span>
     );
   }
