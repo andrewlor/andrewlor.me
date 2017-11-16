@@ -11,7 +11,7 @@ class Logo extends Component {
 				<img
 					id={this.props.id}
 					src={this.props.src}
-					style={{height: '5vw', width: '5vw'}}
+					className='logoImg'
 				/>
 				{this.props.paperClip}
 			</a>

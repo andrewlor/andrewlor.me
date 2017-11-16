@@ -1,10 +1,17 @@
+@font-face {
+  font-family: custom;
+  src: url(../fonts/Avenir.ttc);
+  font-weight: 700;
+}
+
 body {
   height: 100%;
   background-color: lightgrey;
 }
 
 h1, h2, h3, p {
-  font-family: avenir;
+  font-family: custom;
+  font-weight: 500;
 }
 
 h1 {
@@ -25,7 +32,7 @@ h3 {
 ul {
   margin: 0;
   padding: 1vw;
-  font-family: avenir;
+  font-family: custom;
   font-weight: lighter;
   font-size: 1.25vw;
   list-style-type: none;
@@ -67,8 +74,14 @@ ul {
   width: 5vw;
   height: 5vw;
   position: absolute;
+  
   left: 1vw;
   top: 1vw;
+}
+
+.logoImg {
+  width: 5vw;
+  height: 5vw;
 }
 
 .logo:hover {
@@ -249,6 +262,26 @@ ul {
   height: 0vw;
   margin-bottom: 0;
   transition: height 250ms ease, margin-bottom 250ms ease;
+}
+
+@media screen and (max-width: 800px) {
+    #name {
+      font-size: 9vw;
+    }
+    #topBar {
+      height: 20vw;
+    }
+    .logo {
+      left: 0 !important;
+      position: relative;
+      top: 21vw;
+      width: 30vw;
+      height: 30vw;
+    }
+    .logoImg {
+      width: 30vw;
+      height: 30vw;
+    }
 }
 
 
