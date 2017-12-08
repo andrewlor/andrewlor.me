@@ -10,11 +10,19 @@ class PanelRow extends Component {
     super(props);
     this.state = {
       expansions: this.props.panels.map((element, index) => {
-       		return <PanelExpansion onMouseEnter={() => {this.expand(index)}} onMouseLeave={() => {this.collapse(index)}} info={element} key={index}/>;
+       		return <PanelExpansion info={element} key={index}/>;
        	}),
       renderExpansions: this.props.panels.map((element) => {return false}),
     }
   }
+
+  toggle = (index) => {
+    if (this.state.renderExpansions[index]) {
+      this.collapse(index);
+    } else {
+      this.expand(index);
+    }
+  };
 
   expand = (index) => {
   	let newArr = this.state.renderExpansions;
@@ -34,7 +42,7 @@ class PanelRow extends Component {
     return (
       <div className='panelBox'>
        	{this.props.panels.map((element, index) => {
-     			return(<div onMouseEnter={() => {this.expand(index)}} onMouseLeave={() => {this.collapse(index)}} style={{display: 'inline-block'}}>
+     			return(<div onClick={() => {this.toggle(index)}} style={{display: 'inline-block'}}>
      					<Panel name={element.name} key={index} isExpanded={this.state.renderExpansions[index]}/>
 						</div>);
        	})}

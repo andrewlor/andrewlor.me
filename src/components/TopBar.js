@@ -47,7 +47,7 @@ class TopBar extends Component {
   	let contact, paperClip, copiedNotification;
   	if (this.state.renderContact) {
   		contact = <ContactMenu></ContactMenu>;
-  		paperClip = <img src={paperClipIcon} className='centre' id='paperClip'/>;
+  		paperClip = <img src={paperClipIcon} className='centre' id='paperClip' alt=''/>;
   	}
   	if (this.state.renderCopiedNotification) {
   		copiedNotification = <CopiedNotification />;
@@ -55,14 +55,15 @@ class TopBar extends Component {
     return (
     	<span>
 				<div id='topBar' style={{zIndex: 1}}>
+					<h1 id="name2">andrew james lor</h1>
+					<h1 id="name">andrew james lor</h1>
 					<Logo src={linkedinlogo} url='https://www.linkedin.com/in/andrew-lor/'/>
-					<Logo src={githublogo} left={7} url='https://github.com/andrewlor'/>
-				  <Logo src={me} left={13} id='profilePicture' paperClip={paperClip}
+					<Logo src={githublogo} url='https://github.com/andrewlor'/>
+				  <Logo src={me} id='profilePicture' paperClip={paperClip}
 				  	onMouseEnter={this.showContact}
 				  	onMouseLeave={this.hideContact}
 				  	onClick={this.showCopiedNotification}
 				  	data-clipboard-text='a2lor@edu.uwaterloo.ca'></Logo>
-					<h1 id="name">&lt; andrew james lor /&gt;</h1>
 				</div>
 				<ReactCSSTransitionGroup
 		      transitionName="contactMenu"

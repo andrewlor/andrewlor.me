@@ -5,10 +5,10 @@ class Panel extends Component {
   render() {
     return (
       <span>
-  			<button className='panel' onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave}>
+  			<button className='panel' style={this.props.isExpanded ? {backgroundColor: '#ce0000'} : {}}>
           <h3 className='panelText'>{this.props.name}</h3>
         </button>
-        {true ? <div className='panelExpansionConnecter'></div> : null}
+        <div className='panelExpansionConnecter'></div>
       </span>
     );
   }

@@ -1,20 +1,17 @@
-@font-face {
-  font-family: custom;
-  src: url(../fonts/Avenir.ttc);
-}
-
 body {
   height: 100%;
   background-color: lightgrey;
 }
 
-h1, h2, h3, p {
-  font-family: custom;
+h2, h3, p {
+  font-family: 'Quicksand', sans-serif;
 }
 
 h1 {
   margin: 0;
-  font-size: 2.5vw;
+  font-size: 4vw;
+  font-family: 'Pacifico', sans-serif;
+  font-weight: lighter;
 }
 
 h2 {
@@ -30,7 +27,7 @@ h3 {
 ul {
   margin: 0;
   padding: 1vw;
-  font-family: custom;
+  font-family: 'Quicksand', sans-serif;
   font-weight: lighter;
   font-size: 1.25vw;
   list-style-type: none;
@@ -52,10 +49,14 @@ ul {
 #topBar {
   width: 100%;
   height: 7vw;
-  background-color: grey;
+  background-color: lightgrey;
   top: 0;
   position: fixed;
   z-index: 0;
+}
+
+#topSpace {
+  height: 8vw;
 }
 
 #name {
@@ -65,14 +66,26 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
-  color: white;
+  color: #ff0000;
+}
+
+#name2 {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50.5%, -45%);
+  margin: 0;
+  color: #a00000;
 }
 
 .logo {
+  position: relative;
+  display: inline-block;
+  float: right;
   width: 5vw;
   height: 5vw;
-  position: absolute;
-  left: 1vw;
+  margin-right: 1vw;
   top: 1vw;
 }
 
@@ -91,16 +104,21 @@ ul {
 .panel {
   margin-top: 1vw;
   border-radius: 1vw;
-  background-color: #8cb8ff;
+  background-color: #ff0000;
   display: inline-block;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   padding: 1vw;
-  border: none;
+  border-left: 0.5vw #a00000 solid;
+  border-bottom: 0.5vw #a00000 solid;
 }
 
-.panel:hover {
-  background-color: grey;
+.panel:active {
+  border: none;
+  border-left: 0.2vw #a00000 solid;
+  border-bottom: 0.2vw #a00000 solid;
+  transform: translate(-0.3vw, 0.3vw);
+  margin-right: 0.8vw;
 }
 
 .panel:focus {
@@ -139,7 +157,7 @@ ul {
 
 .contactMenuShell {
   position: absolute;
-  left: 15.5vw;
+  right: -4.5vw;
   top: 7vw;
   width: 20vw;
   height: 11vw;
@@ -174,8 +192,7 @@ ul {
 
 .header {
   width: 45vw;
-  margin-left: 27.5vw;
-  border-bottom: 0.5vw solid #8cb8ff;
+  margin-left: 28.5vw;
 }
 
 #copiedNotification {
@@ -254,6 +271,154 @@ ul {
   height: 0vw;
   margin-bottom: 0;
   transition: height 250ms ease, margin-bottom 250ms ease;
+}
+
+#mobileEmail {
+  background-color: white;
+  padding: 5vw;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 960px) {
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  ul {
+    font-size: 2.5vw;
+  }
+
+  #name {
+    left: 2vw;
+    transform: translate(0%, -50%);
+  }
+
+  #name2 {
+    left: 2vw;
+    transform: translate(-0.5%, -45%);
+  }
+
+  #topBar {
+    width: 100%;
+    height: 15vw;
+  }
+
+  #topSpace {
+    height: 18vw;
+  }
+
+  .logo {
+    width: 10vw;
+    height: 10vw;
+    top: 2.5vw;
+    margin-right: 2vw;
+  }
+
+  .header {
+    width: 90vw;
+    margin-left: 7vw;
+  }
+
+  .panelBox {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .panel {
+    margin-top: 2vw;
+    border-radius: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 2vw;
+    border-left: 1vw #a00000 solid;
+    border-bottom: 1vw #a00000 solid;
+  }
+
+  .panel:active {
+    border-left: 0.4vw #a00000 solid;
+    border-bottom: 0.4vw #a00000 solid;
+    transform: translate(-0.6vw, 0.6vw);
+    margin-right: 1.6vw;
+  }
+
+  .panelBox {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .panelText {
+    font-size: 3vw;
+  }
+
+  .panelExpansionConnecter {
+    height: 2vw;
+  }
+
+  .panelExpansion {
+    height: 24vw;
+    border-radius: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .panelExpansionContent {
+    width: calc(100% - 4vw);
+    height: calc(100% - 4vw);
+    padding: 2vw;
+  }
+
+  #profilePicture {
+    visibility: hidden;
+  }
+
+  .contactMenuShell {
+    visibility: hidden;
+  }
+
+  .contactMenu {
+    visibility: hidden;
+  }
+
+  .contactMenuArrow {
+    visibility: hidden;
+  }
+
+  #mobileEmail {
+    visibility: visible;
+  }
+
+  .panelExpansion-enter {
+    height: 0vw;
+    margin-bottom: 0;
+  }
+
+  .panelExpansion-enter.panelExpansion-enter-active {
+    height: 24vw;
+    margin-bottom: 2vw;
+    transition: height 250ms ease, margin-bottom 250ms ease;
+  }
+
+  .panelExpansion-leave {
+    margin-bottom: 2vw;
+    height: 24vw;
+  }
+
+  .panelExpansion-leave.panelExpansion-leave-active {
+    height: 0vw;
+    margin-bottom: 0;
+    transition: height 250ms ease, margin-bottom 250ms ease;
+  }  
 }
 
 

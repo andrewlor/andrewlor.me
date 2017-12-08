@@ -9,7 +9,6 @@ import dataObj from '../helpers/data';
 // Components
 import TopBar from './TopBar';
 import Header from './Header';
-import Panel from './Panel';
 import PanelRow from './PanelRow';
 
 
@@ -24,7 +23,7 @@ class Resume extends Component {
       	transitionAppearTimeout={2000}>
         <div id="resume" className="centre">
 	      	<TopBar style={{zIndex: 1}}></TopBar>
-	      	<div style={{height: '8vw'}}></div>
+	      	<div id='topSpace'></div>
 	      	{dataObj.headers.map((header, index) => {
 	      		return <span key={index}>
 		      		<Header name={header.name}/>
@@ -32,6 +31,9 @@ class Resume extends Component {
 	      		</span>
 	      	})}
 	      	<div style={{height: '10vw'}}></div>
+	      	<div id='mobileEmail'>
+	      		<h2>Contact: a2lor@uwaterloo.ca</h2>
+	      	</div>
 	      </div>
       </ReactCSSTransitionGroup>
     );

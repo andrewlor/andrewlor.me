@@ -5,23 +5,28 @@ module.exports = {
 			panels: [
 				{
 					name: 'html/css',
-					description: ['- advanced knowledge of html5 and css3', '- ~4 years of self taught experience', '- experience from working at AlgoLab, Kudos Inc., passion projects, etc.']
+					header: 'Advanced Knowledge of HTML5 and CSS3',
+					description: ['- ~4 years of self taught experience', '- experience from working at AlgoLab, Kudos Inc., passion projects, etc.']
 				},
 				{
 					name: 'client-side js',
-					description: ['- proficient knowledge of client-side javascript', '- ~3 years of self taught experience', '- experience from working at AlgoLab, Kudos Inc., passion projects, etc.']
+					header: 'Proficient Knowledge of Client-side Javascript',
+					description: ['- ~3 years of self taught experience', '- experience from working at AlgoLab, Kudos Inc., passion projects, etc.']
 				},
 				{
 					name: 'ruby',
-					description: ['- working knowledge of ruby and ruby on rails', '- ~2 years of self taught experience', '- 4 months of mentoree experience at Kudos Inc.', '- lighthouse labs intro to web development 6 week course (2015)']
-				},
-				{
-					name: 'node.js',
-					description: ['- working knowledge of node.js', '- 4 months of mentoree experience at Kudos Inc.', '- self taught experience from NailedIt']
+					header: 'Working Knowledge of Ruby and Ruby on Rails',
+					description: ['- ~2 years of self taught experience', '- 4 months of mentoree experience at Kudos Inc.', '- lighthouse labs intro to web development 6 week course (2015)']
 				},
 				{
 					name: 'c/c++',
-					description: ['- basic knowledge of c/c++', '- experience from hands-on coding assignments in UW courses CS(136/246)']
+					header: 'Basic Knowledge of C/C++',
+					description: ['- experience from hands-on coding assignments in UW courses CS(136/246)']
+				},
+				{
+					name: 'node.js',
+					header: 'Basic Knowledge of Node.js',
+					description: ['- 4 months of mentoree experience at Kudos Inc.']
 				}
 			]
 		},
@@ -46,14 +51,14 @@ module.exports = {
 			name: 'work experience',
 			panels: [
 				{
-					name: 'Kudos: Intern Developer',
-					header: 'Kudos Inc., Intern Developer',
+					name: 'Developer | Kudos',
+					header: 'Developer (Intern)  |  Kudos Inc',
 					date: 'May 2017 – Aug 2017',
 					description: ['- used html, css, js, react.js to build a responsive ui app designed for TVs', '- implemented an authentication flow analogous to oauth, in ruby on rails', '- used node.js and sql queries to implement reporting features', '- resolved issues pertaining to a node.js slack bot app using the slackapi']
 				},
 				{
-					name: 'AlgoLab: Web Developer',
-					header: 'AlgoLab, Web Developer',
+					name: 'Web Developer  |  AlgoLab',
+					header: 'Web Developer  |  AlgoLab',
 					date: 'June 2016 – Aug 2016',
 					description: ['-	developed an interactive, data viewing app with html, css, jquery and javascript', '-	used javascript to manipulate large data sets and calculate finance metrics', '-	created highly interactive ui with scrollbars, date inputs and draggable panels']
 				}
@@ -69,10 +74,10 @@ module.exports = {
 					description: ['- this website is a front end ui/ux project created for the purposes of professional networking', '- built in react.js', '- you\'re on it right now!']
 				},
 				{
-					name: 'NailedIt',
-					header: 'NailedIt',
+					name: 'Nailed It',
+					header: 'Nailed It',
 					date: 'Sept 2017 - current',
-					description: ['- NailedIt is an iOS application designed to integrate the spirit of competition into a social network', '- implemented backend with a \'men stack\' (mongo db, express, node.js) ']
+					description: ['- Nailed It is a web application designed to integrate the spirit of competition into a social network', '- developed the full stack ruby on rails application']
 				}
 			]
 		},
@@ -80,8 +85,8 @@ module.exports = {
 			name: 'hobbies and interests',
 			panels: [
 				{
-					name: 'The Crustaceans: Drummer',
-					header: 'The Crustaceans, Drummer',
+					name: 'Drummer  |  The Crustaceans',
+					header: 'Drummer  |  The Crustaceans',
 					date: 'May 2016 - current',
 					description: ['- The Crustaceans are a post-rock band originating from calgary, alberta', '- utilized teamwork and passion for music to collectively write and record multiple singles with band members'],
 					embed: '<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1728255138/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://the-crustaceans.bandcamp.com/track/sirens">Sirens by The Crustaceans</a></iframe>'
