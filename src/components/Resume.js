@@ -24,6 +24,9 @@ class Resume extends Component {
         <div id="resume" className="centre">
 	      	<TopBar style={{zIndex: 1}}></TopBar>
 	      	<div id='topSpace'></div>
+	      	<div id='mobileEmail'>
+	      		<h3>a2lor@uwaterloo.ca</h3>
+	      	</div>
 	      	{dataObj.headers.map((header, index) => {
 	      		return <span key={index}>
 		      		<Header name={header.name}/>
@@ -31,9 +34,6 @@ class Resume extends Component {
 	      		</span>
 	      	})}
 	      	<div style={{height: '10vw'}}></div>
-	      	<div id='mobileEmail'>
-	      		<h2>Contact: a2lor@uwaterloo.ca</h2>
-	      	</div>
 	      </div>
       </ReactCSSTransitionGroup>
     );

@@ -276,11 +276,11 @@ ul {
 
 #mobileEmail {
   background-color: white;
-  padding: 5vw;
+  padding: 2.5vw;
+  padding-left: 7vw;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  visibility: hidden;
+  margin-bottom: 2vw;
+  display: none;
 }
 
 @media screen and (max-width: 960px) {
@@ -396,7 +396,7 @@ ul {
   }
 
   #mobileEmail {
-    visibility: visible;
+    display: block;
   }
 
   .panelExpansion-enter {
