@@ -109,6 +109,7 @@ ul {
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   padding: 1vw;
+  border: none;
   border-left: 0.5vw #a00000 solid;
   border-bottom: 0.5vw #a00000 solid;
 }
