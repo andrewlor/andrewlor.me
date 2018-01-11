@@ -8,7 +8,7 @@ class PanelExpansion extends Component {
     return (
 			<div className='panelExpansion'>
 				<div className='panelExpansionContent'>
-					<h3 style={{display: 'inline'}}>{this.props.info.header}</h3>
+					<h3 style={{display: 'inline'}} dangerouslySetInnerHTML={{__html: this.props.info.header}}></h3>
 					<h3 style={{display: 'inline', float: 'right'}}>{this.props.info.date}</h3>
 					<ul>
 						{this.props.info.description.map((element, index) => {

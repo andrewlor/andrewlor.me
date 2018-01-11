@@ -126,6 +126,10 @@ ul {
   outline: none;
 }
 
+.panel:hover {
+  cursor: pointer;
+}
+
 .panelBox {
   width: 45vw;
   margin-left: 27.5vw;
@@ -286,7 +290,7 @@ ul {
 @media screen and (max-width: 960px) {
 
   h1 {
-    font-size: 8vw;
+    font-size: 9vw;
   }
 
   h2 {
@@ -307,8 +311,9 @@ ul {
   }
 
   #name2 {
-    left: 2vw;
-    transform: translate(-0.5%, -45%);
+    /*left: 2vw;
+    transform: translate(-0.5%, -45%);*/
+    visibility: hidden;
   }
 
   #topBar {
@@ -419,7 +424,7 @@ ul {
     height: 0vw;
     margin-bottom: 0;
     transition: height 250ms ease, margin-bottom 250ms ease;
-  }  
+  }
 }
 
 
